@@ -34,7 +34,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
-    font-family: "aisv1-Font", monospace;
+    font-family: "Fira Code", monospace;
 }
 
 body {
@@ -221,26 +221,6 @@ nav {
     }
 }
 
-#movie-bg {
-    position: fixed;
-    pointer-events: none;
-    -webkit-animation: movie 1s steps(4) infinite;
-    animation: movie 1s steps(4) infinite;
-    background-image: url(../images/movie.png);
-    height: 150%;
-    left: -50%;
-    top: -50%;
-    width: 150%;
-    pointer-events: none;
-    background-size: 4%;
-    @include mobile() {
-        display: none;
-    }
-    opacity: 1;
-    z-index: 999;
-    animation: grain 1s infinite ease-in-out;
-}
-
 img {
     z-index: 999999;
 }
@@ -271,6 +251,8 @@ img {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        background-image: url(/images/backgroud.jpg);
+        background-size: cover;
 
         .text {
             width: 30%;
@@ -279,12 +261,14 @@ img {
             }
             h1 {
                 font-size: 3rem;
+                color: black;
                 @include mobile {
                     font-size: 2rem;
                 }
             }
 
             p {
+                color: black;
                 text-transform: capitalize;
                 font-weight: 300;
                 font-size: 18px;
@@ -307,7 +291,20 @@ img {
         }
     }
 
-    .about {
+    #about {
+        margin: 0 100px;
+        @include mobile() {
+            margin: 0 50px;
+        }
+        font-size: 16px;
+        p {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            opacity: 0.7;
+        }
+    }
+
+    #activities{
         margin: 0 100px;
         @include mobile() {
             margin: 0 50px;
@@ -365,7 +362,7 @@ img {
     }
 
     .stats {
-        margin: 150px 50px;
+        margin: 150px 60px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -391,8 +388,7 @@ img {
         }
 
         .stats-box {
-            margin-top: 50px;
-            margin: 0 50px;
+            margin: 0 100px;
             align-items: center;
             display: flex;
             justify-content: space-between;
