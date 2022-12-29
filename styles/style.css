@@ -118,6 +118,7 @@ nav {
   height: 10vh;
   transition: all 0.3s ease;
   border-radius: 0 0 8px 8px;
+  z-index: 100;
 }
 @media (max-width: 480px) {
   nav {
