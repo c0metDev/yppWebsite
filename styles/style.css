@@ -36,6 +36,8 @@
 }
 html {
   scroll-behavior: smooth;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
@@ -85,8 +87,9 @@ a {
 
 .head {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 50px 0;
+  color: black;
 }
 
 a.btn {
@@ -118,7 +121,7 @@ nav {
   height: 10vh;
   transition: all 0.3s ease;
   border-radius: 0 0 8px 8px;
-  z-index: 100;
+  z-index: 0;
 }
 @media (max-width: 480px) {
   nav {
@@ -161,7 +164,7 @@ nav .ham img {
 nav.sticky {
   background-color: #040421;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .mobile-screen {
@@ -228,10 +231,6 @@ nav.sticky {
     display: block;
   }
 }
-img {
-  z-index: 999999;
-}
-
 @-webkit-keyframes grain {
   from {
     background-position: auto;
@@ -240,7 +239,6 @@ img {
     background-position: 600%;
   }
 }
-
 @keyframes grain {
   from {
     background-position: auto;
@@ -334,32 +332,29 @@ img {
   font-size: 1.3rem;
   opacity: 0.7;
 }
-.wrapper .info {
-  margin: 0 20px;
-}
-.wrapper .info .row {
+.wrapper .row {
   display: flex;
 }
 @media (max-width: 480px) {
-  .wrapper .info .row {
+  .wrapper .row {
     flex-direction: column;
   }
 }
 @media (max-width: 768px) {
-  .wrapper .info .row {
+  .wrapper .row {
     flex-direction: column;
   }
 }
-.wrapper .info .row {
+.wrapper .row {
   margin-bottom: 20px;
 }
-.wrapper .info .boxes {
+.wrapper .boxes {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.wrapper .info .box {
+.wrapper .box {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -370,14 +365,14 @@ img {
   margin-right: 20px;
 }
 @media (max-width: 480px) {
-  .wrapper .info .box {
+  .wrapper .box {
     width: 100%;
     height: 100%;
     padding: 10px 20px;
     margin-bottom: 20px;
   }
 }
-.wrapper .info .box img {
+.wrapper .box img {
   width: 80px;
 }
 .wrapper .stats {
@@ -464,4 +459,8 @@ footer span {
   padding: 10px 20px;
   background: #0b3160;
   border-radius: 4px;
+}
+
+h2 {
+  padding: 0 100px;
 }/*# sourceMappingURL=style.css.map */

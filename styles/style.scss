@@ -28,6 +28,8 @@ $white: white;
 
 html {
     scroll-behavior: smooth;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 * {
@@ -65,8 +67,9 @@ a {
 
 .head {
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 50px 0;
+    color: black;
 }
 
 a.btn {
@@ -104,6 +107,7 @@ nav {
     height: 10vh;
     transition: all 0.3s ease;
     border-radius: 0 0 8px 8px;
+    z-index: 0;
     .logo {
         display: flex;
         align-items: center;
@@ -143,7 +147,7 @@ nav {
     &.sticky {
         background-color: $darkestBlue;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-        z-index: 100;
+        z-index: 1000;
     }
 }
 
@@ -221,9 +225,7 @@ nav {
     }
 }
 
-img {
-    z-index: 999999;
-}
+
 
 @keyframes grain {
     from {
@@ -317,8 +319,6 @@ img {
         }
     }
 
-    .info {
-        margin: 0 20px;
         .row{
             display: flex;
             @include mobile() {
@@ -359,7 +359,6 @@ img {
                 width: 80px;
             }
         }
-    }
 
     .stats {
         margin: 150px 60px;
@@ -439,10 +438,13 @@ footer {
     }
     align-items: center;
     justify-content: space-around;
-
     span {
         padding: 10px 20px;
         background: $darkBlue;
         border-radius: 4px;
     }
+}
+
+h2{
+    padding: 0 100px;
 }
