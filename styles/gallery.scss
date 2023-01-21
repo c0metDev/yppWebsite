@@ -1,0 +1,118 @@
+$darkBlue: #0b3160;
+$themeColor: #1e89a9;
+$darkestBlue: #040421;
+$greyPurple: #464e68;
+$lightestPurple: #9695ed;
+$black: #111;
+$white: white;
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1220px) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+}
+html,body{
+    background-color: #344bca;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    @include mobile() {
+        justify-content: space-around;
+    }
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    height: 10vh;
+    transition: all 0.3s ease;
+    border-radius: 0 0 8px 8px;
+    z-index: 0;
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .links {
+        @include mobile() {
+            display: none;
+        }
+        ul {
+            display: flex;
+            gap: 15px;
+            li {
+                list-style-type: none;
+
+                a {
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .ham {
+        display: none;
+        @include mobile() {
+            display: block;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    &.sticky {
+        background-color: $darkestBlue;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.wrapper{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    padding: 100px;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}

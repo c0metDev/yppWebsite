@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+html, body {
+  background-color: #344bca;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  height: 10vh;
+  transition: all 0.3s ease;
+  border-radius: 0 0 8px 8px;
+  z-index: 0;
+}
+@media (max-width: 480px) {
+  nav {
+    justify-content: space-around;
+  }
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  nav .links {
+    display: none;
+  }
+}
+nav .links ul {
+  display: flex;
+  gap: 15px;
+}
+nav .links ul li {
+  list-style-type: none;
+}
+nav .links ul li a {
+  transition: all 0.5s ease-in-out;
+}
+nav .links ul li a:hover {
+  font-weight: bold;
+}
+nav .ham {
+  display: none;
+}
+@media (max-width: 480px) {
+  nav .ham {
+    display: block;
+  }
+}
+nav .ham img {
+  width: 50px;
+}
+nav.sticky {
+  background-color: #040421;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  padding: 100px;
+}
+.wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}/*# sourceMappingURL=gallery.css.map */

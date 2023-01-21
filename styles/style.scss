@@ -448,3 +448,20 @@ footer {
 h2{
     padding: 0 100px;
 }
+
+.gallery {
+    height: 100vh;
+    margin: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        border: 1px solid #777;
+      }
+    
+    .gallery img {
+        width: 100%;
+        height: auto;
+      }  
+  }
