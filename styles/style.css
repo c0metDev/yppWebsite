@@ -44,7 +44,6 @@ html {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  font-family: "Fira Code", monospace;
 }
 
 body {
@@ -86,6 +85,7 @@ a {
 }
 
 .head {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   font-size: 4rem;
   margin: 50px 0;
@@ -278,6 +278,7 @@ nav.sticky {
   }
 }
 .wrapper .land .text h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3rem;
   color: black;
 }
@@ -288,7 +289,6 @@ nav.sticky {
 }
 .wrapper .land .text p {
   color: black;
-  text-transform: capitalize;
   font-weight: 300;
   font-size: 18px;
   margin-bottom: 40px;

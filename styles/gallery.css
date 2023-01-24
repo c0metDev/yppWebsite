@@ -44,6 +44,7 @@ nav .links ul li {
 }
 nav .links ul li a {
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
 }
 nav .links ul li a:hover {
   font-weight: bold;
@@ -75,8 +76,8 @@ img {
 .wrapper {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
   grid-auto-flow: dense;
   padding: 100px;
 }
